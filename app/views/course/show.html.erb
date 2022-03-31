@@ -1,0 +1,17 @@
+<%#= content_for(:page_heading) do %>
+<!--<h1 class="text-4xl font-bold text-white"> <%#= @course.name %>  </h1>-->
+<%# end %>
+
+
+
+<h1 class="text-4xl font-bold text-black mb-5">
+  <%= @course.name %>
+</h1>
+
+<p class="text-2xl">
+  <%= @course.summary %>
+</p>
+
+<article class="prose max-w-full">
+  <%= markdown(@course.description) %>
+</article>

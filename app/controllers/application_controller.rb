@@ -19,8 +19,9 @@ class ApplicationController < ActionController::Base
     if !current_user
       'default'
     elsif current_user.is_admin || current_user.is_trainer
-      # 'admin'
-      'default'
+      'admin'
+      # NOTE testing purpose
+      # 'default'
     else
       'default'
     end
