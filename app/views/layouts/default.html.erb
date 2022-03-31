@@ -49,6 +49,21 @@
   </main>
 </div>
 
+
+<script>
+
+    const menu = document.getElementById("nav-toggle");
+    const nav_open = document.getElementById("nav-open");
+    const nav_close = document.getElementById("nav-close");
+
+    menu.onchange = () => {
+        nav_open.classList.toggle("hidden");
+        nav_close.classList.toggle("hidden");
+        document.getElementById("nav-dropdown").classList.toggle("hidden");
+    }
+
+</script>
+
 </body>
 </html>
 
