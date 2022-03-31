@@ -106,38 +106,38 @@
 
 <script>
 
-    window.onload = (event) => {
-        console.log('page is fully loaded');
-        const text_area = document.querySelector(".code");
-        if (text_area) {
-
-            console.log(text_area);
-            const code_mirror = CodeMirror.fromTextArea(text_area, {
-                mode: {
-                    name: "gfm",
-                    gitHubSpice: true,
-                    strikethrough: true,
-                    tokenTypeOverrides: {
-                        emoji: "true"
-                    },
-                    highlightFormatting: true,
-                },
-                lineNumbers: true,
-                smartIndent: true,
-                autoRefresh: true,
-            });
-
-            let ui_codemirror = {
-                lineNumbers: true,
-                lineWrapping: false, autoRefresh: true,
-                theme: 'paraiso-light',
-                styleActiveLine: true, fixedGutter: true,
-                lint: true, coverGutterNextToScrollbar: false,
-                gutters: ['CodeMirror-lint-markers'],
-                mode: 'javascript'
-            }
-        }
-    };
+//    window.onload = (event) => {
+//        console.log('page is fully loaded');
+//        const text_area = document.querySelector(".code");
+//        if (text_area) {
+//
+//            console.log(text_area);
+//            const code_mirror = CodeMirror.fromTextArea(text_area, {
+//                mode: {
+//                    name: "gfm",
+//                    gitHubSpice: true,
+//                    strikethrough: true,
+//                    tokenTypeOverrides: {
+//                        emoji: "true"
+//                    },
+//                    highlightFormatting: true,
+//                },
+//                lineNumbers: true,
+//                smartIndent: true,
+//                autoRefresh: true,
+//            });
+//
+//            let ui_codemirror = {
+//                lineNumbers: true,
+//                lineWrapping: false, autoRefresh: true,
+//                theme: 'paraiso-light',
+//                styleActiveLine: true, fixedGutter: true,
+//                lint: true, coverGutterNextToScrollbar: false,
+//                gutters: ['CodeMirror-lint-markers'],
+//                mode: 'javascript'
+//            }
+//        }
+//    };
 
 </script>
 

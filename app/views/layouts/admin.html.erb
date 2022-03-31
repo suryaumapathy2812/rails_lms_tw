@@ -51,6 +51,20 @@
 </div>
 
 
+<script>
+
+    const sidebar = document.getElementById("sidebar");
+    const btn_sidebar_open = document.getElementById("btn-sidebar-open");
+    btn_sidebar_open.onclick = () => {
+        sidebar.classList.remove("hidden")
+    }
+
+    const btn_sidebar_close = document.getElementById("btn-sidebar-close");
+    btn_sidebar_close.onclick = () => {
+        sidebar.classList.add("hidden")
+    }
+
+</script>
 </body>
 </html>
 
