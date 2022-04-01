@@ -15,7 +15,8 @@ class TopicController < ApplicationController
   def show
   end
 
-  def edit; end
+  def edit
+  end
 
   def create
     @topic = Topic.new(topic_params)
