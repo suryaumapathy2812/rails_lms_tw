@@ -15,16 +15,15 @@ class TopicController < ApplicationController
   def show
   end
 
-  def edit
-
-  end
+  def edit; end
 
   def create
     @topic = Topic.new(topic_params)
-    @topic.user = current_user
+    @topic.course_id = @course.id
+    @topic.user_id = current_user.id
     respond_to do |format|
       if @topic.save
-        format.html { redirect_to course_topic_url(@course, @topic), notice: "Topic was successfully created." }
+        format.html { redirect_to topic_url(@course, @topic), notice: "Topic was successfully created." }
         format.json { render :show, status: :created, location: @topic }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -36,7 +35,7 @@ class TopicController < ApplicationController
   def update
     respond_to do |format|
       if @course.update(course_params)
-        format.html { redirect_to course_topic_url(@topic), notice: "Topic was successfully updated." }
+        format.html { redirect_to topic_url(@topic), notice: "Topic was successfully updated." }
         format.json { render :show, status: :ok, location: @topic }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -68,7 +67,7 @@ class TopicController < ApplicationController
   end
 
   def topic_params
-    params.require(:topic).permit(:name, :summary, :description, :user_id, :banner)
+    params.require(:topic).permit(:name, :summary, :description, :course_id, :user_id)
   end
 
 end
