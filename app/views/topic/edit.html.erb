@@ -1,0 +1,8 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+
+<%= render "form", topic: @topic %>
+
+<script>
+    const simplemde = new SimpleMDE({ element: document.getElementById("mde-editor") });
+</script>
