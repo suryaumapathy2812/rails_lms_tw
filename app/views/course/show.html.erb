@@ -71,9 +71,9 @@
   </div>
 </div>
 
-<% if @course.topics.count > 0 %>
+
   <%= render "topic/list", topics: @course.topics %>
-<% end %>
+
 
 <script>
 
@@ -81,4 +81,5 @@
         document.getElementById("article-overlay").classList.toggle("hidden");
         document.getElementById("article-desc").classList.toggle("line-clamp-14");
     }
+
 </script>
