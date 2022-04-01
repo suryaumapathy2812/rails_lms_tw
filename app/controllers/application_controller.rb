@@ -30,9 +30,7 @@ class ApplicationController < ActionController::Base
 
   def layout_exception
     _current_path = request.path
-    puts 'hello'
     _is_match = _current_path.match(/users/) ? true : false
-    puts "it is a: #{_is_match}"
     _is_match
   end
 end

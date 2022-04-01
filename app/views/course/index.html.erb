@@ -1,3 +1,16 @@
+<%= content_for(:page_heading) do %>
+  <%# if current_user && current_user.is_admin %>
+    <div class="flex justify-between items-center">
+      <h1 class="text-4xl font-bold"> Courses  </h1>
+    </div>
+  <%# else %>
+    <!--    <h1 class="text-4xl font-bold"> <%#= @course.name %>  </h1>-->
+  <%# end %>
+<% end %>
+
+
+
+
 <div class="rounded-lg p-0.5 overflow-hidden divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:gap-4 sm:grid-cols-3">
 
   <% if (current_user && current_user.is_admin) %>
