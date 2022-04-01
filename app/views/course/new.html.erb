@@ -3,18 +3,11 @@
 <!--  Create New Course-->
 <!--</h1>-->
 <%# end %>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.58.2/lib/codemirror.css">
-<style>
-    /*.CodeMirror { text-align: left!important; }*/
-    /*.CodeMirror-line {*/
-    /*    margin-left: 2.5rem*/
-    /*}*/
-</style>
-
-<script src="https://cdn.jsdelivr.net/npm/codemirror@5.58.2/lib/codemirror.min.js"></script>
-<script src="https://codemirror.net/addon/display/autorefresh.js"></script>
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
 
 <%= render "form", course: @course %>
 
+<script>
+    const simplemde = new SimpleMDE({element: document.getElementById("mde-editor")});
+</script>
