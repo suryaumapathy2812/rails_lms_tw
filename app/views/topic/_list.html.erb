@@ -22,25 +22,27 @@
           </li>
         <% end %>
 
-        <% topics.each do |topic| %>
+        <% if @course.topics.count > 0 %>
+          <% topics.each do |topic| %>
 
-          <li class="m-2">
-            <div class="py-6 px-2 rounded-md relative">
-              <h3 class="text-lg font-semibold text-gray-800">
+            <li class="m-2">
+              <div class="py-6 px-2 rounded-md relative">
+                <h3 class="text-lg font-semibold text-gray-800">
 
-                <%= link_to topic_path(@course, topic), class: "hover:underline focus:outline-none" do %>
-                  <!-- Extend touch target to entire panel -->
-                  <span class="absolute inset-0" aria-hidden="true"></span>
-                  <%= topic.name %>
-                <% end %>
+                  <%= link_to topic_path(@course, topic), class: "hover:underline focus:outline-none" do %>
+                    <!-- Extend touch target to entire panel -->
+                    <span class="absolute inset-0" aria-hidden="true"></span>
+                    <%= topic.name %>
+                  <% end %>
 
-              </h3>
-              <p class="mt-1 text-md text-gray-600 line-clamp-2">
-                <%= markdown(topic.summary) %>
-              </p>
-            </div>
-          </li>
+                </h3>
+                <p class="mt-1 text-md text-gray-600 line-clamp-2">
+                  <%= markdown(topic.summary) %>
+                </p>
+              </div>
+            </li>
 
+          <% end %>
         <% end %>
 
       </ul>
