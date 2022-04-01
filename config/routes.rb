@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   #
 
-  root 'course#index'
+  root 'home#index'
 
   # Courses Routes
   get '/courses', to: 'course#index', as: :courses
